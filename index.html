@@ -3,9 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello</title>
+  <title>Cloud Computing | Experiment 6</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; font-family: system-ui, sans-serif; background: #101b30; color: #eaf0fa; }
+    main { width: 100%; max-width: 720px; padding: clamp(24px, 6vw, 56px); border: 1px solid #344460; border-radius: 20px; background: #192740; }
+    .label { color: #8ccaff; text-transform: uppercase; letter-spacing: .12em; font-size: 13px; font-weight: 700; }
+    h1 { font-size: clamp(32px, 6vw, 48px); line-height: 1.1; margin: 20px 0; }
+    p { line-height: 1.7; color: #c6d3e8; }
+    dl { display: grid; grid-template-columns: 100px 1fr; gap: 12px; padding: 24px 0; border-top: 1px solid #344460; border-bottom: 1px solid #344460; }
+    dt { color: #9eb3d0; } dd { margin: 0; }
+    button { margin-top: 12px; padding: 13px 20px; border: 0; border-radius: 8px; background: #9ed4ff; color: #101b30; font: inherit; font-weight: 700; cursor: pointer; }
+    button:hover { background: #c5e5ff; }
+    button:focus-visible { outline: 3px solid white; outline-offset: 4px; }
+    #result { min-height: 54px; }
+  </style>
 </head>
 <body>
-  <h1>Hello</h1>
+  <main>
+    <div class="label">Cloud Computing Lab / Experiment 06</div>
+    <h1>My first cloud web app</h1>
+    <p>Design and deploy a Platform as a Service (PaaS) environment using AWS Amplify.</p>
+    <dl>
+      <dt>Student</dt><dd>Soham Kharat</dd>
+      <dt>Platform</dt><dd>AWS Amplify Hosting</dd>
+      <dt>Source</dt><dd>GitHub repository</dd>
+    </dl>
+    <p>This page demonstrates a simple HTML, CSS, and JavaScript application. AWS Amplify hosts the website and deploys updates from GitHub.</p>
+    <button id="demo" type="button">Test the application</button>
+    <p id="result" role="status" aria-live="polite">Click the button to run the JavaScript demo.</p>
+  </main>
+  <script>
+    document.getElementById('demo').addEventListener('click', () => {
+      document.getElementById('result').textContent = 'Hello, Soham! The application is working. Current time: ' + new Date().toLocaleString();
+    });
+  </script>
 </body>
 </html>
